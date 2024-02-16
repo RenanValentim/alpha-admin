@@ -1,6 +1,7 @@
 import { Slider } from "@/components/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useState } from "react";
+import { FadeLeft } from "@/components/animations/fadeLeft";
 
 export const Home = () => {
   const [installment, setInstallment] = useState(3057.54);
@@ -10,9 +11,11 @@ export const Home = () => {
 
   return (
     <div className="w-full h-screen px-10 flex items-center justify-between max-w-screen-2xl py-0.5 bg-banner-carrossel">
-      <h1 className="text-alphaBlue text-3xl text-start font-bold max-w-md uppercase">
-        Concretize seus objetivos com simplicidade e eficiência
-      </h1>
+      <FadeLeft>
+        <h1 className="text-alphaBlue text-4xl text-start font-bold max-w-lg uppercase">
+          Concretize seus objetivos com simplicidade e eficiência
+        </h1>
+      </FadeLeft>
 
       <div className="w-80 flex flex-col px-5 items-center justify-center py-4 border-0 rounded-lg bg-white">
         <h1 className="text-black text-xl text-center font-bold">
